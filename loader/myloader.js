@@ -1,4 +1,4 @@
 module.exports = function hello (source) {
-	console.log(source)
-	return `export default ${JSON.stringify(source)} `
+	let callback = this.async()
+	callback(null, `export default ${JSON.stringify(source)} `)
 }
