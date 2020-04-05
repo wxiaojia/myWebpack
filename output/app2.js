@@ -86,18 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
-  \*****************************************************/
-/*! no xxx.com/static/ exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\n// eslint-disable-next-line func-names\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return \"@media \".concat(item[2], \" {\").concat(content, \"}\");\n      }\n\n      return content;\n    }).join('');\n  }; // import a list of modules into the list\n  // eslint-disable-next-line func-names\n\n\n  list.i = function (modules, mediaQuery, dedupe) {\n    if (typeof modules === 'string') {\n      // eslint-disable-next-line no-param-reassign\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var i = 0; i < this.length; i++) {\n        // eslint-disable-next-line prefer-destructuring\n        var id = this[i][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _i = 0; _i < modules.length; _i++) {\n      var item = [].concat(modules[_i]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        // eslint-disable-next-line no-continue\n        continue;\n      }\n\n      if (mediaQuery) {\n        if (!item[2]) {\n          item[2] = mediaQuery;\n        } else {\n          item[2] = \"\".concat(mediaQuery, \" and \").concat(item[2]);\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring\n\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return \"/*# sourceURL=\".concat(cssMapping.sourceRoot || '').concat(source, \" */\");\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = \"sourceMappingURL=data:application/json;charset=utf-8;base64,\".concat(base64);\n  return \"/*# \".concat(data, \" */\");\n}\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/api.js?");
-
-/***/ }),
-
 /***/ "./page2.js":
 /*!******************!*\
   !*** ./page2.js ***!
@@ -106,7 +94,7 @@ eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.less */ \"./test.less\");\n/* harmony import */ var _test_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_test_less__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _test2_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test2.less */ \"./test2.less\");\n/* harmony import */ var _test2_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_test2_less__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n// 自定义的语法\nfunction  test3 () {\n\tlet element = document.getElementById('app')\n\t\telement.innerHTML = element.innerHTML + '  自定义语法'\n\t\tdocument.getElementById('mydiv').setAttribute('class', _test_less__WEBPACK_IMPORTED_MODULE_0___default.a.div1)\n}\n \ntest3() \n\n//# sourceURL=webpack:///./page2.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.less */ \"./test.less\");\n/* harmony import */ var _test_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_test_less__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _test2_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test2.less */ \"./test2.less\");\n/* harmony import */ var _test2_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_test2_less__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\n// 自定义的语法\r\nfunction  test3 () {\r\n\tlet element = document.getElementById('app')\r\n\t\telement.innerHTML = element.innerHTML + '  自定义语法'\r\n\t\tdocument.getElementById('mydiv').setAttribute('class', _test_less__WEBPACK_IMPORTED_MODULE_0___default.a.div1)\r\n}\r\n \r\ntest3() \n\n//# sourceURL=webpack:///./page2.js?");
 
 /***/ }),
 
@@ -115,9 +103,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tes
   !*** ./test.less ***!
   \*******************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \"* {\\n  background-color: red;\\n}\\n/*:global全局的意思,定义一个全局的类名*/\\n.test_border-white_0c01 {\\n  border: 4px solid white;\\n}\\n/*:local 局部的 composes继承另一个类*/\\n.test_div1_b63d {\\n  width: 50px;\\n  height: 50px;\\n  background-color: pink;\\n  /*composes: border-white from './test.css'; 可以继承另外一个文件的类*/\\n}\\n\", \"\"]);\n// Exports\nexports.locals = {\n\t\"border-white\": \"test_border-white_0c01\",\n\t\"div1\": \"test_div1_b63d test_border-white_0c01\"\n};\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./test.less?");
+eval("// removed by extract-text-webpack-plugin\nmodule.exports = {\"border-white\":\"test_border-white_0c01\",\"div1\":\"test_div1_b63d test_border-white_0c01\"};\n\n//# sourceURL=webpack:///./test.less?");
 
 /***/ }),
 
@@ -126,9 +114,9 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./no
   !*** ./test2.less ***!
   \********************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \"body {\\n  font-size: 20px;\\n}\\n.test2_colorBlue_094e {\\n  color: blue;\\n}\\n\", \"\"]);\n// Exports\nexports.locals = {\n\t\"colorBlue\": \"test2_colorBlue_094e\"\n};\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./test2.less?");
+eval("// removed by extract-text-webpack-plugin\nmodule.exports = {\"colorBlue\":\"test2_colorBlue_094e\"};\n\n//# sourceURL=webpack:///./test2.less?");
 
 /***/ })
 

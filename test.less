@@ -3,7 +3,7 @@
 }
 /*:global全局的意思,定义一个全局的类名*/
 .border-white {
-    border: 4px solid white;
+    border: 4px solid var(--mainColor);
 }
 /*:local 局部的 composes继承另一个类*/
 :local .div1 {
@@ -12,4 +12,8 @@
     background-color: pink;
     composes: border-white;
     /*composes: border-white from './test.css'; 可以继承另外一个文件的类*/
+}
+
+:root {
+    --mainColor: red;   /* postcss-cssnext的语法，定义mainColor变量,将这个变量给到border-yellow */
 }

@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test_hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.hello */ \"./test.hello\");\n/* harmony import */ var _test_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test.ts */ \"./test.ts\");\n/* harmony import */ var _test_ts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_test_ts__WEBPACK_IMPORTED_MODULE_1__);\n// 尝试 显示文件中的内容\n\n\n\nfunction test1 () {\n\tlet element = document.getElementById('app')\n\t\n\telement.innerHTML = _test_hello__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n}\n\ntest1()\n\n// 取出console.log()\nvar a = 123\nvar c = 2333\n\n\nalert(9)\nfunction  test2 () { \n\tlet element = document.getElementById('app')\n\t\telement.innerHTML = element.innerHTML + ' ' + c\n}\n \ntest2()\n\n\n\n//# sourceURL=webpack:///./main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test_hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.hello */ \"./test.hello\");\n/* harmony import */ var _test_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test.ts */ \"./test.ts\");\n/* harmony import */ var _test_ts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_test_ts__WEBPACK_IMPORTED_MODULE_1__);\n// 尝试 显示文件中的内容\r\n\r\n\r\n\r\nfunction test1 () {\r\n\tlet element = document.getElementById('app')\r\n\t\r\n\telement.innerHTML = _test_hello__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\r\n}\r\n\r\ntest1()\r\n\r\n// 取出console.log()\r\nvar a = 123\r\nvar c = 2333\r\n\r\n\r\nalert(9)\r\nfunction  test2 () { \r\n\tlet element = document.getElementById('app')\r\n\t\telement.innerHTML = element.innerHTML + ' ' + c\r\n}\r\n \r\ntest2()\r\n\r\n\n\n//# sourceURL=webpack:///./main.js?");
 
 /***/ }),
 
@@ -114,10 +114,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /*!*****************!*\
   !*** ./test.ts ***!
   \*****************/
-/*! no xxx.com/static/ exports found */
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var hello = 'Hello World!';\nconsole.log(hello);\n\n\n//# sourceURL=webpack:///./test.ts?");
+eval("var hello = 'Hello World!';\r\nconsole.log(hello);\r\n\n\n//# sourceURL=webpack:///./test.ts?");
 
 /***/ })
 

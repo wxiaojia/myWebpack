@@ -1,6 +1,7 @@
 const path = require('path')	// node的方法
 const staticChange = require('./plugin/staticChange')
 const extractTextCss = require('extract-text-webpack-plugin')
+const htmlWebpackPlugin = require('html-webpack-plugin')
 
 const fs = require("fs");
 
@@ -60,50 +61,44 @@ module.exports = {
 			test: /.tsx?$/,			// typescript的文件后缀有ts的也有tsx的，所以？ 表示1个或0个
 			use: 'ts-loader'
 		}, {
-			test: /.less$/,	 
-			// use: extractTextCss.extract({
-			// 	fallback: {
-			// 		loader: 'style-loader',
-			// 	}
-			// }),
-			// use: [{
-			// 	loader: 'css-loader',
-			// 	options: {
-			// 		modules: {
-			// 			localIdentName: '[path][name]_[local]_[hash:4]'	// path文件路径，name文件名，local原始类
-			// 		}
-			// 	}
-			// }, {
-			// 	loader: 'less-loader'
-			// }]
-			use: [{
-				loader: 'style-loader'	// loader从后往前去运行的
-			}, {
-				loader: 'css-loader',
-				options: {
-					modules: {
-						localIdentName: '[path][name]_[local]_[hash:4]'	// path文件路径，name文件名，local原始类
+			test: /\.less$/,
+			 use: extractTextCss.extract({
+			 	fallback: {
+			 		loader: 'style-loader',
+			 	},
+				 use: [{
+				 	loader: 'css-loader',
+				 	options: {
+				 		modules: {
+				 			localIdentName: '[path][name]_[local]_[hash:4]'	// path文件路径，name文件名，local原始类
+				 		}
+				 	}
+				 }, {
+					loader: 'postcss-loader',
+					options: {
+						ident: 'postcss',	// 告诉webpack，定义的plugins是给谁使用的
+						plugins: [
+							require('autoprefixer')(),
+							require('postcss-cssnext')()
+						]
 					}
-				}
-			}, {
-				loader: 'postcss-loader',
-				options: {
-					ident: 'postcss',	// 告诉webpack，定义的plugins是给谁使用的
-					plugins: [
-						require('autoprefixer')({
-							"overrideBrowerslist": [">1%", "last 2 version"]
-						})
-					]
-				}
-			}, {
-				loader: 'less-loader'
-			}]
+				}]
+			})
 		}]
 	},
 	plugins: [
-		new staticChange(),
-		// new extractTextCss({ 
-		// 	filename: '[name].min.css'
-		// })
+//		new staticChange(),
+		 new extractTextCss({ 
+		 	filename: '[name].min.css'
+		 }),
+		 new htmlWebpackPlugin({
+		 	filename: 'index.html',
+		 	template: './index.html',
+		 	minify: {
+		 		collapseWhitespace: true		// 压缩
+		 	},
+//		 	inject: false					// 控制是否把资源自动引入，false不自动，要手动引入
+			chunks: ['app']						// 若有两个入口文件，不使用chunks指定，那么就会自动引用两个
+		 })
 	]
 } 
