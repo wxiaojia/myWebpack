@@ -1,0 +1,15 @@
+* {
+	background-color: red;
+}
+/*:global全局的意思,定义一个全局的类名*/
+.border-white {
+    border: 4px solid white;
+}
+/*:local 局部的 composes继承另一个类*/
+:local .div1 {
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    composes: border-white;
+    /*composes: border-white from './test.css'; 可以继承另外一个文件的类*/
+}

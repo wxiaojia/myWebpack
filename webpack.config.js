@@ -1,5 +1,6 @@
 const path = require('path')	// node的方法
 const staticChange = require('./plugin/staticChange')
+const extractTextCss = require('extract-text-webpack-plugin')
 
 const fs = require("fs");
 
@@ -59,15 +60,50 @@ module.exports = {
 			test: /.tsx?$/,			// typescript的文件后缀有ts的也有tsx的，所以？ 表示1个或0个
 			use: 'ts-loader'
 		}, {
-			test: /.css$/,	 
+			test: /.less$/,	 
+			// use: extractTextCss.extract({
+			// 	fallback: {
+			// 		loader: 'style-loader',
+			// 	}
+			// }),
+			// use: [{
+			// 	loader: 'css-loader',
+			// 	options: {
+			// 		modules: {
+			// 			localIdentName: '[path][name]_[local]_[hash:4]'	// path文件路径，name文件名，local原始类
+			// 		}
+			// 	}
+			// }, {
+			// 	loader: 'less-loader'
+			// }]
 			use: [{
 				loader: 'style-loader'	// loader从后往前去运行的
 			}, {
-				loader: 'css-loader'
+				loader: 'css-loader',
+				options: {
+					modules: {
+						localIdentName: '[path][name]_[local]_[hash:4]'	// path文件路径，name文件名，local原始类
+					}
+				}
+			}, {
+				loader: 'postcss-loader',
+				options: {
+					ident: 'postcss',	// 告诉webpack，定义的plugins是给谁使用的
+					plugins: [
+						require('autoprefixer')({
+							"overrideBrowerslist": [">1%", "last 2 version"]
+						})
+					]
+				}
+			}, {
+				loader: 'less-loader'
 			}]
 		}]
 	},
 	plugins: [
-		new staticChange() 
+		new staticChange(),
+		// new extractTextCss({ 
+		// 	filename: '[name].min.css'
+		// })
 	]
 } 
