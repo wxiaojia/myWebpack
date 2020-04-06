@@ -12,22 +12,21 @@ module.exports = {
          	rewrites: [{
            		from: /^\/([ -~]+)/,		//　以斜杠开头，后面是任意的字符串
            		to: function (content) {	// content就是上面正则匹配到的内容
-           			return './' + content.match[1] + './html'			//  匹配到的，如果输入'/a'那content.match[1]就是a,如果输入的是'/b'那就是b,谈后去匹配当前目录下的html
+//         			return './' + content.match[1] + './html'			//  匹配到的，如果输入'/a'那content.match[1]就是a,如果输入的是'/b'那就是b,谈后去匹配当前目录下的html
+           			return './404.html'			// 作业：一个具有404页面的webpack-dev-server 。
            		}
            	}]
         },
-        proxy: {
-        	'/': {								// 碰到以/开头的地址就进行这个代理转发
-        		target: '123.123.123.123',		// 转发的地址
-        		changeOrigin: true,				
-        		pathRewrite: {					// 可以对接口进行简化，在是用中只需要添加写'/comments'
-        			'^/comments': '/api/comments'
-        		},
-        		headers: {						// 代理的请求上面加请求头
-        			
-        		}
-        	}
-        }
+//      proxy: {
+//      	'/': {								// 碰到以/开头的地址就进行这个代理转发
+//      		target: '123.123.123.123',		// 转发的地址
+//      		changeOrigin: true,				
+//      		pathRewrite: {					// 可以对接口进行简化，在是用中只需要添加写'/comments'
+//      			'^/comments': '/api/comments'
+//      		},
+//      		headers: {}						// 代理的请求上面加请求头
+//      	}
+//      }
     },
 	// 其他常用配置：
 	//inline 服务的开启模式(默认true,若为false 时在页面顶部有一个状态条，显示当前状态是编译还是准备状态)

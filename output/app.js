@@ -81,57 +81,44 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./main.js");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
+/******/ ({
 
-var hello = 'Hello World!';
-console.log(hello);
-
-
-/***/ }),
-/* 1 */,
-/* 2 */
+/***/ "./main.js":
+/*!*****************!*\
+  !*** ./main.js ***!
+  \*****************/
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test_hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.hello */ \"./test.hello\");\n/* harmony import */ var _test_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test.ts */ \"./test.ts\");\n/* harmony import */ var _test_ts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_test_ts__WEBPACK_IMPORTED_MODULE_1__);\n// 尝试 显示文件中的内容\r\n\r\n\r\n\r\nfunction test1 () {\r\n\tlet element = document.getElementById('app')\r\n\t\r\n\telement.innerHTML = _test_hello__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\r\n}\r\n\r\ntest1()\r\n\r\n// 取出console.log()\r\nvar a = 123\r\nvar c = 2333\r\n\r\n\r\nalert(9)\r\nfunction  test2 () { \r\n\tlet element = document.getElementById('app')\r\n\t\telement.innerHTML = element.innerHTML + ' ' + c\r\n}\r\n \r\ntest2()\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./main.js?");
 
-// CONCATENATED MODULE: ./test.hello
-/* harmony default export */ var test_hello = ("这个自己写的load .hello是因为说明webpack可以识别"); 
-// EXTERNAL MODULE: ./test.ts
-var test = __webpack_require__(0);
+/***/ }),
 
-// CONCATENATED MODULE: ./main.js
-// 尝试 显示文件中的内容
+/***/ "./test.hello":
+/*!********************!*\
+  !*** ./test.hello ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"这个自己写的load .hello是因为说明webpack可以识别\"); \n\n//# sourceURL=webpack:///./test.hello?");
 
+/***/ }),
 
-function test1 () {
-	let element = document.getElementById('app')
-	
-	element.innerHTML = test_hello
-}
+/***/ "./test.ts":
+/*!*****************!*\
+  !*** ./test.ts ***!
+  \*****************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-test1()
-
-// 取出console.log()
-var a = 123
-var c = 2333
-
-
-alert(9)
-function  test2 () { 
-	let element = document.getElementById('app')
-		element.innerHTML = element.innerHTML + ' ' + c
-}
- 
-test2()
-
-
+eval("var hello = 'Hello World!';\r\nconsole.log(hello);\r\n\n\n//# sourceURL=webpack:///./test.ts?");
 
 /***/ })
-/******/ ]);
+
+/******/ });

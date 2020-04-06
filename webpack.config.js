@@ -36,12 +36,12 @@ const fs = require("fs");
 // 	}
 // }
 
-module.exports = env => {
+module.exports = {
+	mode: 'development',
 	entry: {
 		app: path.resolve(__dirname, './main.js'),
 		app2: path.resolve(__dirname,'./page2.js')
 	},			// 入口文件
-//	mode: 'development',
 	output: {
 		// 如果还是这种形式，会报错，Conflict: Multiple chunks emit assets to the same filename bundle.js (chunks app and app2)，因为有多个chunk，所以不能只定义一个输出文件
 		// filename: 'bundle.js',
