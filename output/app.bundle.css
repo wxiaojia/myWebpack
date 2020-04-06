@@ -1,0 +1,23 @@
+* {
+	background-color: red;
+}
+/*:global全局的意思,定义一个全局的类名*/
+.test_border-white_0c01 {
+    border: 4px solid red;
+}
+/*:local 局部的 composes继承另一个类*/
+.test_div1_b63d {
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    /*composes: border-white from './test.css'; 可以继承另外一个文件的类*/
+}
+
+:root {   /* postcss-cssnext的语法，定义mainColor变量,将这个变量给到border-yellow */
+}
+body {
+	font-size: 20px;
+}
+.test2_colorBlue_094e {
+	color: blue;
+}

@@ -81,43 +81,49 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./page2.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ "./page2.js":
-/*!******************!*\
-  !*** ./page2.js ***!
-  \******************/
-/*! no exports provided */
+/******/ ([
+/* 0 */,
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.less */ \"./test.less\");\n/* harmony import */ var _test_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_test_less__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _test2_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test2.less */ \"./test2.less\");\n/* harmony import */ var _test2_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_test2_less__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\n// 自定义的语法\r\nfunction  test3 () {\r\n\tlet element = document.getElementById('app')\r\n\t\telement.innerHTML = element.innerHTML + '  自定义语法'\r\n\t\tdocument.getElementById('mydiv').setAttribute('class', _test_less__WEBPACK_IMPORTED_MODULE_0___default.a.div1)\r\n}\r\n \r\ntest3() \n\n//# sourceURL=webpack:///./page2.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _test_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _test_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_test_less__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _test2_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var _test2_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_test2_less__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+// 自定义的语法
+function  test3 () {
+	let element = document.getElementById('app')
+		element.innerHTML = element.innerHTML + '  自定义语法'
+		document.getElementById('mydiv').setAttribute('class', _test_less__WEBPACK_IMPORTED_MODULE_0___default.a.div1)
+}
+ 
+test3() 
 
 /***/ }),
-
-/***/ "./test.less":
-/*!*******************!*\
-  !*** ./test.less ***!
-  \*******************/
-/*! no static exports found */
+/* 2 */,
+/* 3 */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\nmodule.exports = {\"border-white\":\"test_border-white_0c01\",\"div1\":\"test_div1_b63d test_border-white_0c01\"};\n\n//# sourceURL=webpack:///./test.less?");
+// removed by extract-text-webpack-plugin
+module.exports = {"border-white":"test_border-white_0c01","div1":"test_div1_b63d test_border-white_0c01"};
 
 /***/ }),
-
-/***/ "./test2.less":
-/*!********************!*\
-  !*** ./test2.less ***!
-  \********************/
-/*! no static exports found */
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\nmodule.exports = {\"colorBlue\":\"test2_colorBlue_094e\"};\n\n//# sourceURL=webpack:///./test2.less?");
+// removed by extract-text-webpack-plugin
+module.exports = {"colorBlue":"test2_colorBlue_094e"};
 
 /***/ })
-
-/******/ });
+/******/ ]);
