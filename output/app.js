@@ -94,7 +94,18 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test_hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.hello */ \"./test.hello\");\n/* harmony import */ var _test_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test.ts */ \"./test.ts\");\n/* harmony import */ var _test_ts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_test_ts__WEBPACK_IMPORTED_MODULE_1__);\n// 尝试 显示文件中的内容\r\n\r\n\r\n\r\nfunction test1 () {\r\n\tlet element = document.getElementById('app')\r\n\t\r\n\telement.innerHTML = _test_hello__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\r\n}\r\n\r\ntest1()\r\n\r\n// 取出console.log()\r\nvar a = 123\r\nvar c = 2333\r\n\r\n\r\nalert(9)\r\nfunction  test2 () { \r\n\tlet element = document.getElementById('app')\r\n\t\telement.innerHTML = element.innerHTML + ' ' + c\r\n}\r\n \r\ntest2()\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test_hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.hello */ \"./test.hello\");\n/* harmony import */ var _test_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test.ts */ \"./test.ts\");\n/* harmony import */ var _test_ts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_test_ts__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _static_img_img_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./static/img/img.jpg */ \"./static/img/img.jpg\");\n/* harmony import */ var _static_img_img_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_static_img_img_jpg__WEBPACK_IMPORTED_MODULE_2__);\n// 尝试 显示文件中的内容\r\n\r\n\r\n// 引入图片\r\n\r\nvar img = new Image()\r\nimg.src = _static_img_img_jpg__WEBPACK_IMPORTED_MODULE_2___default.a;\r\ndocument.getElementById('mydiv').appendChild(img)\r\n\r\n\r\n\r\nfunction test1 () {\r\n\tlet element = document.getElementById('app')\r\n\t\r\n\telement.innerHTML = _test_hello__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\r\n}\r\n\r\ntest1()\r\n\r\n// 取出console.log()\r\nvar a = 123\r\nvar c = 2333\r\n\r\n\r\nalert(9)\r\nfunction  test2 () { \r\n\tlet element = document.getElementById('app')\r\n\t\telement.innerHTML = element.innerHTML + ' ' + c\r\n}\r\n \r\ntest2()\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./main.js?");
+
+/***/ }),
+
+/***/ "./static/img/img.jpg":
+/*!****************************!*\
+  !*** ./static/img/img.jpg ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:0)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack:///./static/img/img.jpg?");
 
 /***/ }),
 
